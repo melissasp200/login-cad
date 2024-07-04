@@ -9,8 +9,26 @@ if(!loginEmail || !loginSenha){
   alert("Favor preencher todos os campos.");
 
 }else{
-   alert("Campos preenchidos com sucesso.");
+   //alert("Campos preenchidos com sucesso.");
+   window.location.href= 'cadastro.html';
 
 }
 
+}
+
+
+//Função que armazena, em array, nome na tela de cadastro
+
+var dadosLista = [];
+
+function salvarUser(){
+   let nomeUser = document.getElementById('nomeUser').value;
+
+   if(nomeUser){
+
+
+   }else{
+    alert("Favor informar o nome cadastrado")
+
+   }
 }
