@@ -26,13 +26,22 @@ function salvarUser(){
 
    if(nomeUser){
     dadosLista.push(nomeUser);
-    console.log(dadosLista);
+    //console.log(dadosLista);
+    crialista();
     document.getElementById('nomeUser').value = "";
-
-
+  
    }else{
     alert("Favor informar o nome cadastrado");
 
 
    }
-}       
+}    
+
+//funçao para criar lista
+function criarlista(){
+let tabela = document.getElementById('tabela').innerHTML = "<tr><th>nome Usuario</th><th>Açoes</th</tr>";
+for(let i = 0; i <= (dadosLista.length-1); i++){
+   tabela += "<tr><td>"  +  dadosLista[i] + "</td><td></td></tr>";
+   document.getElementById('tabela').innerHTML = tabela;
+}
+}
