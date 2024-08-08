@@ -38,10 +38,19 @@ function salvarUser(){
 }    
 
 //funçao para criar lista
-function criarlista(){
-let tabela = document.getElementById('tabela').innerHTML = "<tr><th>nome Usuario</th><th>Açoes</th</tr>";
+function crialista(){
+ let tabela = document.getElementById('tabela').innerHTML = "<tr><th>nome Usuario</th><th>Açoes</th</tr>";
 for(let i = 0; i <= (dadosLista.length-1); i++){
-   tabela += "<tr><td>"  +  dadosLista[i] + "</td><td></td></tr>";
+   tabela += "<tr><td>"  +  dadosLista[i] + "</td><td> <button type= 'button'> Editar </button></td></tr>";
    document.getElementById('tabela').innerHTML = tabela;
 }
 }
+
+//Função para editar nomes da lista
+
+ function editar(i){
+   document.getElementById('nomeUser').value = dadosLista [(i - i)];
+   dadosLista.splice(dadosLista [(i - 1)], 1);
+
+
+ }
