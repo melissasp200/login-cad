@@ -41,7 +41,7 @@ function salvarUser(){
 function crialista(){
  let tabela = document.getElementById('tabela').innerHTML = "<tr><th>nome Usuario</th><th>Açoes</th</tr>";
 for(let i = 0; i <= (dadosLista.length-1); i++){
-   tabela += "<tr><td>"  +  dadosLista[i] + "</td><td> <button type= 'button'> Editar </button></td></tr>";
+   tabela += "<tr><td>"  +  dadosLista[i] + "</td><td> <button type= 'button' onclick= 'editar(this.parentNode.parentNode.rowIndex)'> Editar </button></td></tr>";
    document.getElementById('tabela').innerHTML = tabela;
 }
 }
