@@ -2,6 +2,8 @@
 
 ### Neste projeto, com a ajuda do professor, fizemos em sala de aula duas telas. Uma de cadastro e a outra de login usando as linguagens de HTML e JAVASCRIPT.
 
+-------------------------------------------------------------------------------
+
 
 * ### **Tela de login:** 
 
@@ -15,6 +17,8 @@
 > # **EXPLICAÇÃO DO CÓDIGO JS**
 
 ### O código gerencia um processo de login e um sistema simples de cadastro de usuários, permitindo adicionar e editar nomes em uma lista exibida em uma tabela HTML.
+
+---------------------------------------------------------------------
 
 
 
@@ -68,13 +72,15 @@
 
 > ## **Informações adicionais:**    
 
+-------------------------------------------------------------------
+
    ### splice() : altera o conteúdo de uma lista, adicionando novos elementos enquanto remove elementos antigos. *(developer.mozilla.org)*
 
    ### deleteRow() : remove a linha no índice especificado de uma tabela. *(www.w3schools.com)*
-   
 
 
----------------------------------------------------------------------------------------------
+
+
 
 
 
