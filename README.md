@@ -10,7 +10,7 @@
 
 ![LOGIN-CAD](img/cad.png)
 
-## EXPLICAÇÃO
+## EXPLICAÇÃO DO CÓDIGO JS
 
 * ### Login (acessar()): Verifica e redireciona se os campos de email e senha estão preenchidos.
 
