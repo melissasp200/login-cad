@@ -78,6 +78,8 @@
 
    ### deleteRow() : remove a linha no índice especificado de uma tabela. *(www.w3schools.com)*
 
+-----------------------------------------------------------------------
+#### *As informações foram obtidas com a ajuda do chatGPT*
 
 
 
