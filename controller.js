@@ -17,7 +17,7 @@ if(!loginEmail || !loginSenha){
 }
 
 
-//Função que armazena, em array, nome na tela de cadastro
+//Função que armazena, em array, nome e email na tela de cadastro
 
 var dadosLista = [];
 var salvaEmail = [];
