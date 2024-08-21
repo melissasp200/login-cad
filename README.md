@@ -12,7 +12,7 @@
 
 * ### **Tela de cadastro:**  
 
-![LOGIN-CAD](img/cad2.png)
+![LOGIN-CAD](img/htmlcad.png)
 
 > # **EXPLICAÇÃO DO CÓDIGO JS**
 
