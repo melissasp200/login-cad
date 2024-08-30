@@ -85,6 +85,9 @@
 
    ### Essas funções trabalham juntas para manter a tabela de usuários atualizada e sincronizada com os dados.
 
+## **VALIDAÇÕES**
+
+
 
 > ## **Informações adicionais:**    
 
