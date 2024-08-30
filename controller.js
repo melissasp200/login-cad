@@ -82,9 +82,7 @@ function excluir(i) {
 
 }
 
-// VALIDAÇÕES
-
-// CPF
+// VALIDAÇÃO CPF
 
 document.getElementById('cpfForm').addEventListener('submit', function (event) {
   event.preventDefault();
