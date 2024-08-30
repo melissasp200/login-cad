@@ -29,10 +29,9 @@ function salvarUser() {
   let email = document.getElementById('emailUser').value;
   let cpf = document.getElementById('CPFuser').value;
 
-}
-
-
- if (nome && email && cpf) {
+  if (email == "" || email.indexOf('@') == -1 || email.indexOf('.') == -1) {
+    alert("Por favor, informe um e-mail valido");
+  } else if (nome && email && validaCPF(cpf)) {
     //dadosLista.push(nomeUser); 
     //salvaEmail.push(email);
     //salvaCPF.push(CPF);
@@ -48,7 +47,7 @@ function salvarUser() {
     alert("Favor informar o nome, email e CPF para cadastrado");
 
   }
-
+}
 
 // Função para criar lista
 
@@ -87,74 +86,62 @@ function excluir(i) {
 
 // CPF
 
-document.getElementById('cpfForm').addEventListener('submit', function(event){
+document.getElementById('cpfForm').addEventListener('submit', function (event) {
   event.preventDefault();
 
   const cpf = document.getElementById('cpf').value;
   const msg = document.getElementById('message');
 
-  if(validarCPF(cpf)){
-      msg.textContent = 'O CPF é válido!';
-      msg.style.color = 'green';
-  }else{
-      msg.textContent = 'O CPF é inválido!';
-      msg.style.color = 'red';
+  if (salvarUser(cpf)) {
+    msg.textContent = 'O CPF é válido!';
+    msg.style.color = 'green';
+  } else {
+    msg.textContent = 'O CPF é inválido!';
+    msg.style.color = 'red';
   }
 }
 );
 
-function salvarUser(cpf){
-  cpf = cpf.replace(/[^\d]+/g, ''); // Remove caracteres não numéricos
+function validaCPF(c) {
+  c = c.replace(/[^\d]+/g, ''); // Remove caracteres não numéricos
 
   // Estrutura de decisão para verificar quantidade de dígitos e se todos os digitos são iguais
-  if(cpf.length !== 11 || /^(\d)\1{10}$/.test(cpf)){
-      return false;
+  if (c.length !== 11 || /^(\d)\1{10}$/.test(c)) {
+    return false;
   }
- 
+
   let soma = 0;
   let resto;
 
   // Validando 10º digito do CPF - o primeiro digito verificador
-  for(let i=1;i <= 9;i++){
-      soma += parseInt(cpf.substring(i-1, i)) * (11 - i);
+  for (let i = 1; i <= 9; i++) {
+    soma += parseInt(c.substring(i - 1, i)) * (11 - i);
   }
 
   resto = (soma * 10) % 11;
 
-  if((resto === 10) || (resto === 11)){
-      resto = 0;
+  if ((resto === 10) || (resto === 11)) {
+    resto = 0;
   }
-  if(resto !== parseInt(cpf.substring(9, 10))){
-      return false;
+  if (resto !== parseInt(c.substring(9, 10))) {
+    return false;
   }
   // Validando 11º digito do CPF - o segundo digito verificador
   soma = 0;
-  for(let i = 1; i <= 10; i++){
-      soma += parseInt(cpf.substring(i-1, i)) * (12 - i);
+  for (let i = 1; i <= 10; i++) {
+    soma += parseInt(c.substring(i - 1, i)) * (12 - i);
   }
 
   resto = (soma * 10) % 11;
 
-  if((resto === 10) || (resto === 11)){
-      resto = 0;
+  if ((resto === 10) || (resto === 11)) {
+    resto = 0;
   }
- 
-  if(resto !== parseInt(cpf.substring(10, 11))){
-      return false;
+
+  if (resto !== parseInt(c.substring(10, 11))) {
+    return false;
   }
 
   return true;
-}
-
-// EMAIL
-
-function salvarUser(email){
-  if(document.forms[0].email.value == "" ||
-   document.forms[0].email.value.indexOf('@') == -1||
-    document.forms[0].email.value.indexOf('.') == -1 ){
-      alert("porfavor, informe um e-mail valido");}else{
-         // alert("EMAIL INFORMADO COM SUCESSO")
-      }
-   
 }
 
