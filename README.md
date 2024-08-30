@@ -49,7 +49,7 @@
    ### *Objetivo*: Adiciona o nome do usuário digitado na tela de cadastro a uma lista.
    ### *Ação*: Se o nome estiver preenchido, adiciona à lista dadosLista, atualiza a tabela exibida na tela e limpa o campo de entrada. Se o nome não estiver preenchido, exibe um alerta.  
 
-   ![LOGIN-CAD](img/salvauser2.png)
+   ![LOGIN-CAD](img/salvauser3.png)
 
 
 
@@ -59,16 +59,16 @@
    ### *Objetivo*: Atualiza a tabela na tela de cadastro para exibir a lista de nomes de usuários.
    ### *Ação*: Gera o HTML da tabela com base nos nomes armazenados em dadosLista, incluindo um botão "Editar" para cada nome.  
 
-   ![LOGIN-CAD](img/crialista2.png)
+   ![LOGIN-CAD](img/crialista3.png)
 
 
 
-* ## **editar(index):**
+* ## **editar(i):**
 
    ### *Objetivo*: Permite editar um nome da lista.
    ### *Ação*: Preenche o campo de entrada com o nome selecionado para edição e remove esse nome da lista. Depois, atualiza a tabela para refletir a mudança.  
 
-   ![LOGIN-CAD](img/editanome2.png)
+   ![LOGIN-CAD](img/edit3.png)
 
 
 
@@ -116,10 +116,15 @@
 
    ### deleteRow() : remove a linha no índice especificado de uma tabela. *(www.w3schools.com)*
 
------------------------------------------------------------------------
+-------------------------------------------------------------------------
+
+
+
+
 
 > ## **Resumo:**
----------------------------------------------------------------------------
+
+------------------------------------------------------------------------------
 
   ### O código implementa um sistema básico de cadastro de usuários. Inclui funcionalidades para login, cadastro, exibição e edição de usuários, e validação do CPF. Utiliza um array para armazenar os dados dos usuários e manipula a interface HTML para exibir e atualizar essas informações.
 
